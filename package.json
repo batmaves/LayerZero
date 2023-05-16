@@ -12,6 +12,9 @@
     "contracts/interfaces"
   ],
   "scripts": {
+    "prettier": "prettier --write .prettierrc.js && prettier --write test/**/*.js && prettier --write test/*.js && prettier --write deploy/*.js && prettier --write tasks/*.js && prettier --write utils/*.js && prettier --write contracts/*.sol && prettier --write contracts/**/*.sol",
+    "lint": "yarn prettier",
+    "format": "yarn prettier && echo 'Code formatted successfully!'",
     "build": "hardhat compile",
     "console": "hardhat console",
     "wireBtoA": "npx hardhat --network arbitrum-rinkeby wire-endpoints --endpoint-b bsc-testnet",
